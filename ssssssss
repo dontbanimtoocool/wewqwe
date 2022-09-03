@@ -1,0 +1,57 @@
+while wait() do
+	if 1+1 == 2 then
+coroutine.wrap(function()
+	pcall(function()
+workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+
+local Gun = game.Players.LocalPlayer.Backpack["Remington 870"] or game.Players.LocalPlayer.Character["Remington 870"]
+
+local args = {
+	[1] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [2] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [3] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [4] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [5] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [6] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [7] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}, [8] = {
+["RayObject"] = Ray.new(Vector3.new(), Vector3.new()), 
+["Distance"] = 0, 
+["Cframe"] = CFrame.new(), 
+["Hit"] = workspace[game.Players.LocalPlayer.Name].Head
+	}
+}
+
+game:GetService("ReplicatedStorage").ShootEvent:FireServer(args, Gun)
+	end)
+end)()
+	end
+end
